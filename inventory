@@ -1,0 +1,2 @@
+[test-vm]
+test-vm-1 ansible_host=34.171.66.183
