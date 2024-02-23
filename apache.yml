@@ -1,0 +1,11 @@
+- name: Install apache
+  hosts: all
+  become: true
+  
+  tasks:
+  
+  - name: apt update & install apache
+    package:
+      name: httpd
+      state: present
+      update_cache: yes
