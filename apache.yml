@@ -6,6 +6,6 @@
   
   - name: apt update & install apache
     package:
-      name: apache2
+      name: apache2      # 'httpd' for ubuntu os. 'apache2' for debian os
       state: present
       update_cache: yes
