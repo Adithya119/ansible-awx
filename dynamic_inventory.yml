@@ -1,0 +1,10 @@
+---
+projects:
+  - terraform-on-gcp-414809
+
+filters:
+- labels.env = test
+
+hostnames:
+  # List host by name instead of the default public ip
+  - name
