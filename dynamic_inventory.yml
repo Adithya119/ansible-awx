@@ -3,8 +3,13 @@ projects:
   - terraform-on-gcp-414809
 
 filters:
-- labels.env = test
+  - labels.env = test
 
 hostnames:
   # List host by name instead of the default public ip
   - name
+
+compose:
+  # Set an inventory parameter to use the Public IP address to connect to the host
+  # For Private ip use "networkInterfaces[0].networkIP"
+  ansible_host: networkInterfaces[0].accessConfigs[0].natIP
