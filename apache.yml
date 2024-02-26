@@ -9,3 +9,8 @@
       name: apache2      # 'httpd' for ubuntu os. 'apache2' for debian os
       state: present
       update_cache: yes
+
+  - name: modify index.html
+    shell:
+      chdir: /var/www/html/
+      cmd: sudo echo "<html><body><h1>Hello from $(hostname)</h1></body></html>" > index.html
