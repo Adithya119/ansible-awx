@@ -6,6 +6,6 @@
   
   - name: apt update & install apache
     package:
-      name: httpd
+      name: apache2
       state: present
       update_cache: yes
